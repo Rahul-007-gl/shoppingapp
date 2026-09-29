@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1768d5">
+  <meta name="description" content="Shop the latest electronics, gadgets and everyday tech at ShopKart.">
+  <title>ShopKart | Big deals on brilliant tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="ShopKart home">
+        <span class="brand-name">shop<span>kart</span><i>.</i></span>
+        <span class="brand-tagline">Good tech. Better prices.</span>
+      </a>
+
+      <form class="search-box" id="search-form" role="search">
+        <label class="sr-only" for="search-input">Search for products</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="search-input" type="search" placeholder="Search for mobiles, laptops, headphones..." autocomplete="off">
+        <button type="submit" aria-label="Search">Search</button>
+      </form>
+
+      <div class="header-actions">
+        <button class="account-button" type="button" aria-label="Your account"><span aria-hidden="true">♙</span><span>Account</span></button>
+        <button class="cart-button" id="cart-open" type="button" aria-label="Open shopping cart">
+          <span class="cart-icon" aria-hidden="true">▱</span><span>Cart</span><span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <nav class="category-bar" aria-label="Product categories">
+      <div class="category-inner" id="category-list">
+        <button class="category-item is-active" type="button" data-category="All"><span class="category-icon">✦</span><span>All offers</span></button>
+        <button class="category-item" type="button" data-category="Mobiles"><span class="category-icon">▯</span><span>Mobiles</span></button>
+        <button class="category-item" type="button" data-category="Laptops"><span class="category-icon">▱</span><span>Laptops</span></button>
+        <button class="category-item" type="button" data-category="Audio"><span class="category-icon">♫</span><span>Audio</span></button>
+        <button class="category-item" type="button" data-category="Cameras"><span class="category-icon">◎</span><span>Cameras</span></button>
+        <button class="category-item" type="button" data-category="Wearables"><span class="category-icon">◷</span><span>Wearables</span></button>
+        <button class="category-item" type="button" data-category="Home tech"><span class="category-icon">⌂</span><span>Home tech</span></button>
+      </div>
+    </nav>
+
+    <section class="hero" aria-label="Today's featured offer">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> THE GREAT TECH SALE</p>
+        <h1>Big upgrades.<br><em>Brighter prices.</em></h1>
+        <p class="hero-description">Your next favourite piece of tech is closer than you think.</p>
+        <div class="hero-offer"><strong>Up to 60% off</strong><span>on top electronics</span></div>
+        <a class="hero-cta" href="#deals">Shop the deals <span aria-hidden="true">↗</span></a>
+        <div class="hero-pagination" aria-hidden="true"><span class="current"></span><span></span><span></span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-sun"></div>
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1150&q=85" alt="A bright, modern workspace filled with laptops and technology">
+        <div class="hero-sticker"><span>EXTRA</span><strong>10%</strong><span>OFF</span></div>
+        <div class="hero-caption"><span>01 / 03</span><span>Tech that moves with you</span></div>
+      </div>
+    </section>
+
+    <section class="benefit-strip" aria-label="Shopping benefits">
+      <div class="benefit"><span class="benefit-icon delivery">↗</span><div><strong>Free delivery</strong><span>On orders over ₹499</span></div></div>
+      <div class="benefit"><span class="benefit-icon return">↺</span><div><strong>Easy 7-day returns</strong><span>Shop with confidence</span></div></div>
+      <div class="benefit"><span class="benefit-icon secure">✓</span><div><strong>Secure payments</strong><span>100% protected checkout</span></div></div>
+      <div class="benefit"><span class="benefit-icon support">♡</span><div><strong>Here to help</strong><span>Support, whenever you need</span></div></div>
+    </section>
+
+    <section class="deals-section" id="deals">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">HANDPICKED FOR YOU</p>
+          <h2>Deals worth a <span>double take</span></h2>
+        </div>
+        <div class="deal-controls">
+          <span class="result-count" id="result-count"></span>
+          <label class="sr-only" for="sort-select">Sort products</label>
+          <select id="sort-select" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: low to high</option>
+            <option value="price-high">Price: high to low</option>
+            <option value="rating">Top rated</option>
+          </select>
+        </div>
+      </div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span aria-hidden="true">⌕</span><h3>No matches this time</h3><p>Try a different search or browse all offers.</p>
+        <button type="button" id="clear-search">Show all products</button>
+      </div>
+    </section>
+
+    <section class="promo-band">
+      <div class="promo-mark" aria-hidden="true">%</div>
+      <div><p>PAY SMARTER</p><h2>More ways to make it yours.</h2><span>Instant bank discounts + easy monthly payments on select products.</span></div>
+      <a href="#deals">Explore offers <span aria-hidden="true">→</span></a>
+      <div class="promo-lines" aria-hidden="true"></div>
+    </section>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#top"><span class="brand-name">shop<span>kart</span><i>.</i></span></a>
+      <span>Good tech. Better prices. Every day.</span>
+      <span>© 2026 ShopKart. Made for your next upgrade.</span>
+    </footer>
+  </main>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-modal="true" role="dialog" aria-hidden="true">
+    <div class="drawer-header"><div><p class="section-kicker">YOUR PICKS</p><h2 id="cart-title">Shopping cart <span id="cart-title-count">(0)</span></h2></div><button class="icon-button" id="cart-close" type="button" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><span aria-hidden="true">▱</span><h3>Your cart is taking a nap</h3><p>Add a little tech to wake it up.</p></div>
+    <div class="cart-summary" id="cart-summary" hidden>
+      <div><span>Subtotal</span><strong id="cart-subtotal">₹0</strong></div>
+      <p>Delivery calculated at checkout</p>
+      <button class="checkout-button" id="checkout-button" type="button">Continue to checkout <span aria-hidden="true">→</span></button>
+    </div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
