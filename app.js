@@ -1,14 +1,27 @@
 const products = [
-  { id: 1, name: "Soundcore Studio Wireless Headphones", category: "Audio", price: 3499, original: 5999, rating: 4.5, reviews: 1284, image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=82", offer: "Bank offer: extra 10% off" },
-  { id: 2, name: "Nova X5 5G Smartphone · 128 GB", category: "Mobiles", price: 24999, original: 32999, rating: 4.4, reviews: 2316, image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=82", offer: "No-cost EMI available" },
-  { id: 3, name: "AeroBook 14 Slim Laptop · 16 GB RAM", category: "Laptops", price: 54990, original: 69990, rating: 4.6, reviews: 864, image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=82", offer: "Extra ₹2,000 off with card" },
-  { id: 4, name: "PixelPro Mirrorless 4K Camera", category: "Cameras", price: 42990, original: 56990, rating: 4.7, reviews: 452, image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=700&q=82", offer: "Free 64 GB memory card" },
-  { id: 5, name: "Pulse Active Smartwatch · GPS", category: "Wearables", price: 4999, original: 8999, rating: 4.3, reviews: 1860, image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=82", offer: "Up to 6 months no-cost EMI" },
-  { id: 6, name: "BoomBox Go Portable Bluetooth Speaker", category: "Audio", price: 2799, original: 4499, rating: 4.5, reviews: 1037, image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=700&q=82", offer: "Save ₹500 with UPI" },
-  { id: 7, name: "ViewMax 55-inch 4K Smart TV", category: "Home tech", price: 38990, original: 54990, rating: 4.4, reviews: 672, image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=700&q=82", offer: "Free installation included" },
-  { id: 8, name: "Tab Air 11-inch Wi-Fi Tablet", category: "Home tech", price: 18999, original: 25999, rating: 4.2, reviews: 938, image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=700&q=82", offer: "Exchange bonus up to ₹3,000" },
-  { id: 9, name: "GameCore Wireless Controller", category: "Home tech", price: 3899, original: 5499, rating: 4.6, reviews: 541, image: "https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?auto=format&fit=crop&w=700&q=82", offer: "Extra 5% off with bank cards" },
-  { id: 10, name: "AirBeat True Wireless Earbuds", category: "Audio", price: 1999, original: 3999, rating: 4.1, reviews: 2910, image: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=700&q=82", offer: "Free delivery on this item" }
+  { id: 1, name: "Sony Alpha 7 IV Full-Frame Mirrorless Camera Body", category: "Cameras", price: 219990, original: 249990, image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=700&q=82" },
+  { id: 2, name: "Canon EOS R6 Mark II Full-Frame Camera Body", category: "Cameras", price: 209990, original: 239990, image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=700&q=82" },
+  { id: 3, name: "Apple MacBook Pro 14-inch · M4 Pro · 24 GB / 512 GB", category: "Laptops", price: 199900, original: 209900, image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=82" },
+  { id: 4, name: "Samsung Galaxy Z Fold6 · 512 GB", category: "Mobiles", price: 189999, original: 200999, image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=82" },
+  { id: 5, name: "LG OLED evo C4 · 65-inch 4K Smart TV", category: "Home tech", price: 169990, original: 229990, image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=700&q=82" },
+  { id: 6, name: "Apple iPhone 16 Pro Max · 256 GB", category: "Mobiles", price: 144900, original: 154900, image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=82" },
+  { id: 7, name: "Apple MacBook Air 15-inch · M4 · 16 GB / 256 GB", category: "Laptops", price: 134900, original: 144900, image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=82" },
+  { id: 8, name: "Samsung Galaxy S25 Ultra · 256 GB", category: "Mobiles", price: 129999, original: 141999, image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=82" },
+  { id: 9, name: "Apple iPad Pro 13-inch · M4 · 256 GB Wi-Fi", category: "Home tech", price: 129900, original: 149900, image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=700&q=82" },
+  { id: 10, name: "Sony BRAVIA 7 · 65-inch Mini LED 4K TV", category: "Home tech", price: 119990, original: 159990, image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=700&q=82" },
+  { id: 11, name: "ASUS ROG Strix G16 Gaming Laptop · RTX graphics", category: "Laptops", price: 114990, original: 139990, image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=82" },
+  { id: 12, name: "Apple Watch Ultra 2 · GPS + Cellular", category: "Wearables", price: 89900, original: 89900, image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=82" },
+  { id: 13, name: "Sony Alpha A6400 · 16–50 mm Lens Kit", category: "Cameras", price: 89990, original: 99990, image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=700&q=82" },
+  { id: 14, name: "Apple iPhone 16 · 128 GB", category: "Mobiles", price: 69900, original: 79900, image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=82" },
+  { id: 15, name: "Samsung 55-inch QLED Q60D 4K Smart TV", category: "Home tech", price: 59990, original: 79990, image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=700&q=82" },
+  { id: 16, name: "Sony PlayStation 5 Slim Disc Edition", category: "Home tech", price: 54990, original: 54990, image: "https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?auto=format&fit=crop&w=700&q=82" },
+  { id: 17, name: "Apple Watch Series 10 · GPS · 46 mm", category: "Wearables", price: 46900, original: 46900, image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=82" },
+  { id: 18, name: "Samsung Galaxy Tab S9 FE+ · 128 GB Wi-Fi", category: "Home tech", price: 44999, original: 54999, image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=700&q=82" },
+  { id: 19, name: "Garmin Venu 3 GPS Smartwatch", category: "Wearables", price: 41990, original: 47990, image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=82" },
+  { id: 20, name: "Bose QuietComfort Ultra Wireless Headphones", category: "Audio", price: 35900, original: 35900, image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=82" },
+  { id: 21, name: "Sony WH-1000XM5 Wireless Noise-Cancelling Headphones", category: "Audio", price: 29990, original: 34990, image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=82" },
+  { id: 22, name: "Apple AirPods Pro 2 · USB-C", category: "Audio", price: 24900, original: 26900, image: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=700&q=82" },
+  { id: 23, name: "JBL Charge 5 Portable Bluetooth Speaker", category: "Audio", price: 14999, original: 17999, image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=700&q=82" }
 ];
 
 const currency = new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 });
@@ -49,9 +62,8 @@ function renderProducts() {
       <div class="product-info">
         <p class="product-category">${product.category}</p>
         <h3 class="product-name">${product.name}</h3>
-        <div class="rating-row"><span class="rating">${product.rating} <span>★</span></span><span class="rating-count">(${product.reviews.toLocaleString("en-IN")})</span></div>
         <div class="price-row"><span class="price">${currency.format(product.price)}</span><span class="original-price">${currency.format(product.original)}</span></div>
-        <div class="product-footer"><span class="offer-note">${product.offer}</span><button class="add-button" type="button" data-add="${product.id}">Add to cart</button></div>
+        <div class="product-footer"><span class="offer-note">Offers vary by seller</span><button class="add-button" type="button" data-add="${product.id}">Add to cart</button></div>
       </div>
     </article>`;
   }).join("");

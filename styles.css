@@ -94,6 +94,7 @@ a { color: inherit; text-decoration: none; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 15px; margin-bottom: 20px; }
 .section-heading h2 { margin: 7px 0 0; font: 700 26px/1.2 "Space Grotesk", sans-serif; letter-spacing: 0; }
 .section-heading h2 span { color: var(--blue); }
+.price-disclaimer { margin: -8px 0 16px; color: var(--muted); font-size: 11px; line-height: 1.5; }
 .deal-controls { display: flex; align-items: center; gap: 13px; }
 .result-count { color: var(--muted); font-size: 11px; }
 .deal-controls select { height: 36px; padding: 0 28px 0 11px; border: 1px solid #dce2e8; border-radius: 4px; background: white; color: #536170; font-size: 11px; }
@@ -174,7 +175,6 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 1000px) {
   .header-inner { gap: 24px; }
   .product-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .product-card:nth-child(n + 9) { display: none; }
   .hero h1 { font-size: 41px; }
   .benefit-strip { padding-right: 10px; padding-left: 10px; }
 }
@@ -218,7 +218,6 @@ a { color: inherit; text-decoration: none; }
   .section-heading h2 { font-size: 22px; }
   .deal-controls { width: 100%; justify-content: space-between; }
   .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
-  .product-card:nth-child(n + 9) { display: block; }
   .product-image-wrap { height: 145px; margin: 6px 6px 0; }
   .product-info { padding: 10px 9px 11px; }
   .product-name { min-height: 35px; font-size: 11px; }

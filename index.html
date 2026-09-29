@@ -85,11 +85,12 @@
           <select id="sort-select" aria-label="Sort products">
             <option value="featured">Featured</option>
             <option value="price-low">Price: low to high</option>
-            <option value="price-high">Price: high to low</option>
+            <option value="price-high" selected>Price: high to low</option>
             <option value="rating">Top rated</option>
           </select>
         </div>
       </div>
+      <p class="price-disclaimer">Prices are reference estimates, not live retailer prices. Offers and stock can change; check the seller before buying.</p>
       <div class="product-grid" id="product-grid" aria-live="polite"></div>
       <div class="empty-state" id="empty-state" hidden>
         <span aria-hidden="true">⌕</span><h3>No matches this time</h3><p>Try a different search or browse all offers.</p>
